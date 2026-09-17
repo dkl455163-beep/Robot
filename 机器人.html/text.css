@@ -1,0 +1,62 @@
+.emoji-box{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.emoji{
+    font-size: 30px;
+    animation: emoji-bounce 1.2s infinite; 
+    display: inline-block;
+}
+.response-text{
+    font-size: 17px;
+    background-color: aliceblue;
+    /* 修改点2：加大内边距，提升阅读呼吸感 */
+    padding: 15px; 
+    border-radius: 8px;
+    /* 修改点3：长文本左对齐更易读（原center适合短文本） */
+    text-align: left; 
+    /* 修改点4：增加行间距，优化阅读体验 */
+    line-height: 1.6; 
+}
+
+/* 修改点1：同步修复动画名 */
+@keyframes emoji-bounce { 
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        /* 修改点5：动画方向改为向上跳（避免遮挡下方内容） */
+        transform: translateY(-10px); 
+    }
+}
+
+/* 新增 body 样式：实现全局居中 */
+body {
+    margin: 0;           
+    padding: 0;          
+    min-height: 100vh;   
+    display: flex;       
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f9f9f9; 
+}
+
+.response-box {
+    width: 470px;
+    /* 修改点6：高度自适应（原height固定易溢出，改为min-height保留最小高度） */
+    min-height: 300px;  
+    background-color: #ffffff; 
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+/* 新增：交互提示样式（如果页面有“按住空格键开始说话”的提示，补充以下代码） */
+.prompt {
+    text-align: center;
+    color: #666;
+    margin: 10px 0;
+    font-size: 14px;
+}

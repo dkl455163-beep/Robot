@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI语音助手 - 流式输出版</title>
+    <link rel="stylesheet" href="./text.css">
+    <link rel="stylesheet" href="./text2.css">
+   
+</head>
+<body>
+    <div class="response-box">
+        <div class="emoji-box">
+            <span class="emoji">⚛️</span>
+        </div>
+        <div class="response-text" id="responseContent">
+            你好！请问有什么需要我帮助的嘛？
+        </div>
+        
+        <!-- 波浪加载动画 -->
+        <div class="loading-container" id="loadingContainer">
+            <div class="loading">
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+        
+        <!-- 状态指示器 -->
+        <div class="status-indicator">
+            <span class="status-dot" id="status"></span>
+            <span id="statusText">按住空格键开始说话</span>
+        </div>
+    </div>
+
+     <script src="./text.js"></script>
+</body>
+</html>
